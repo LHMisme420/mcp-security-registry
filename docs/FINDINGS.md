@@ -1,14 +1,34 @@
 # MCP Security Registry - Findings Report
 
-**Scanned:** 17 servers | **Found:** 2 vulnerabilities on Citedy MCP
+**Date:** October 12, 2026
+**Researcher:** Leroy (VATA)
+**Servers Scanned:** 17
+**Vulnerabilities Found:** 2
 
-## Citedy MCP - Zero-Auth Endpoints
+## Critical Finding: Citedy MCP
 
-- GET /sse → exposes server metadata (version 3.0.0)
-- GET /tools/list → tool enumeration without auth
+**Server:** https://mcp.citedy.com/mcp
+**Issue:** Zero-auth endpoints expose server metadata
+**Severity:** HIGH
 
-Status: UNPATCHED as of 2026-10-12
+### Details
 
-## Scanned & Clean
+GET /sse returns:
 
-Tavily, Daloopa, BetterBugs, Lusha, AntiMetal, FlowStudio, Hunter.io, PointFive, Context7, DYPAI, ByteRover, ItJuzi, BurnBar, Exa, IcePanel, CircleCI, Supabase
+GET /tools/list also requires no auth.
+
+### Impact
+- Server version disclosure
+- Technology stack enumeration
+- Low impact (no sensitive data exposed in this case)
+
+### Fix
+Require authentication on /sse and /tools/list endpoints.
+
+---
+
+## Clean Servers (16)
+
+Tavily, Daloopa, BetterBugs, Lusha, AntiMetal, FlowStudio, Hunter.io, PointFive, Context7, DYPAI, ByteRover, ItJuzi, BurnBar, Exa, IcePanel, CircleCI
+
+All properly require authentication.
