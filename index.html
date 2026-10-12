@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCP Security Registry</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Courier New', monospace;
+      background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 100%);
+      color: #00ff41;
+      overflow-x: hidden;
+    }
+    
+    .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+    
+    header {
+      text-align: center;
+      margin-bottom: 60px;
+      padding: 40px 0;
+      border-bottom: 2px solid #00ff41;
+    }
+    
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px #00ff41;
+      letter-spacing: 2px;
+    }
+    
+    .tagline {
+      font-size: 18px;
+      color: #00cc00;
+      margin-bottom: 20px;
+    }
+    
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 40px 0;
+    }
+    
+    .stat-box {
+      background: rgba(0, 255, 65, 0.1);
+      border: 2px solid #00ff41;
+      padding: 20px;
+      text-align: center;
+      border-radius: 5px;
+    }
+    
+    .stat-number {
+      font-size: 36px;
+      color: #00ff41;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .stat-label {
+      color: #00cc00;
+      font-size: 14px;
+    }
+    
+    .critical {
+      background: rgba(255, 0, 0, 0.1);
+      border: 2px solid #ff0000;
+      padding: 30px;
+      margin: 40px 0;
+      border-radius: 5px;
+    }
+    
+    .critical h2 {
+      color: #ff0000;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+    
+    .vulnerability {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      margin: 20px 0;
+      border-left: 4px solid #ff0000;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+    }
+    
+    .endpoint {
+      color: #ffff00;
+      font-weight: bold;
+      margin: 10px 0 5px 0;
+    }
+    
+    .status-bad {
+      color: #ff0000;
+      font-weight: bold;
+    }
+    
+    .status-good {
+      color: #00ff41;
+      font-weight: bold;
+    }
+    
+    .servers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      margin: 30px 0;
+    }
+    
+    .server {
+      background: rgba(0, 255, 65, 0.05);
+      border: 1px solid #00ff41;
+      padding: 15px;
+      text-align: center;
+      border-radius: 3px;
+      font-size: 13px;
+    }
+    
+    .server.vulnerable {
+      background: rgba(255, 0, 0, 0.1);
+      border-color: #ff0000;
+    }
+    
+    .methodology {
+      margin: 40px 0;
+      padding: 20px;
+      background: rgba(0, 255, 65, 0.05);
+      border: 1px solid #00ff41;
+      border-radius: 5px;
+    }
+    
+    .methodology h3 {
+      color: #00ff41;
+      margin-bottom: 15px;
+    }
+    
+    .rules {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin: 15px 0;
+    }
+    
+    .rule {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 15px;
+      border-left: 3px solid #00ff41;
+      border-radius: 3px;
+    }
+    
+    .rule-name {
+      color: #00ff41;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .links {
+      margin: 40px 0;
+      text-align: center;
+    }
+    
+    a {
+      color: #00ff41;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      border-bottom: 1px dashed #00ff41;
+    }
+    
+    a:hover {
+      color: #00cc00;
+      text-shadow: 0 0 5px #00ff41;
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid #00ff41;
+      color: #00cc00;
+      font-size: 12px;
+    }
+    
+    .ascii {
+      font-size: 11px;
+      color: #00ff41;
+      text-align: center;
+      margin: 20px 0;
+      line-height: 1.2;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🔍 MCP SECURITY REGISTRY</h1>
+      <p class="tagline">Verified Intelligence • Transparent Findings • Actionable Intel</p>
+      <p style="color: #00aa00; font-size: 14px; margin-top: 15px;">RECEIPTS OVER PROMISES</p>
+    </header>
+    
+    <div class="stats">
+      <div class="stat-box">
+        <div class="stat-number">17</div>
+        <div class="stat-label">Servers Scanned</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">2</div>
+        <div class="stat-label">Vulnerabilities Found</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">16</div>
+        <div class="stat-label">Secure Servers</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">94%</div>
+        <div class="stat-label">Security Score</div>
+      </div>
+    </div>
+    
+    <div class="critical">
+      <h2>🚨 CRITICAL FINDING: CITEDY MCP</h2>
+      
+      <div class="vulnerability">
+        <div class="endpoint">GET https://mcp.citedy.com/mcp/sse</div>
+        <div>Returns: Server metadata (name, version, protocol)</div>
+        <div style="margin-top: 10px;">Authentication: <span class="status-bad">❌ NONE REQUIRED</span></div>
+      </div>
+      
+      <div class="vulnerability">
+        <div class="endpoint">GET https://mcp.citedy.com/mcp/tools/list</div>
+        <div>Returns: Tool enumeration without credentials</div>
+        <div style="margin-top: 10px;">Authentication: <span class="status-bad">❌ NONE REQUIRED</span></div>
+      </div>
+      
+      <p style="margin-top: 20px; color: #ffff00;">
+        ⚠️ Exposes: Server version (3.0.0), Protocol version (2025-03-26), Technology stack
+      </p>
+      <p style="margin-top: 10px; color: #ffff00;">
+        Fix: Require authentication on both endpoints
+      </p>
+    </div>
+    
+    <div>
+      <h2 style="color: #00ff41; margin: 30px 0 20px 0;">✅ VERIFIED SECURE (16/17)</h2>
+      <div class="servers-grid">
+        <div class="server">Tavily</div>
+        <div class="server">Daloopa</div>
+        <div class="server">BetterBugs</div>
+        <div class="server">Lusha</div>
+        <div class="server">AntiMetal</div>
+        <div class="server">FlowStudio</div>
+        <div class="server">Hunter.io</div>
+        <div class="server">PointFive</div>
+        <div class="server">Context7</div>
+        <div class="server">DYPAI</div>
+        <div class="server">ByteRover</div>
+        <div class="server">ItJuzi</div>
+        <div class="server">BurnBar</div>
+        <div class="server">Exa</div>
+        <div class="server">IcePanel</div>
+        <div class="server">CircleCI</div>
+      </div>
+    </div>
+    
+    <div class="methodology">
+      <h3>🔬 DETECTION METHODOLOGY</h3>
+      <div class="rules">
+        <div class="rule">
+          <div class="rule-name">D1</div>
+          Zero-auth endpoints
+        </div>
+        <div class="rule">
+          <div class="rule-name">D3</div>
+          Token validation bypass
+        </div>
+        <div class="rule">
+          <div class="rule-name">E1</div>
+          Session isolation
+        </div>
+        <div class="rule">
+          <div class="rule-name">E2</div>
+          Secrets in logs
+        </div>
+        <div class="rule">
+          <div class="rule-name">E3</div>
+          Injection vectors
+        </div>
+      </div>
+    </div>
+    
+    <div class="links">
+      <a href="docs/FINDINGS.md">📄 Full Findings</a>
+      <a href="docs/DASHBOARD.md">📊 Dashboard</a>
+      <a href="docs/METHODOLOGY.md">🔍 Methodology</a>
+      <a href="https://github.com/LHMisme420/mcp-security-registry">🐙 GitHub</a>
+    </div>
+    
+    <footer>
+      <p>Maintained by Leroy (VATA) | October 12, 2026</p>
+      <p style="margin-top: 10px;">Verified • Transparent • Actionable Security Intelligence</p>
+    </footer>
+  </div>
+</body>
+</html>
