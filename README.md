@@ -1,15 +1,15 @@
 # MCP Security Registry
 
-**First comprehensive public security audit of 728 MCP servers.**
+**First comprehensive public security audit of 2,028 MCP servers.**
 
 ## V2 Comprehensive Scan Results
 
 ```
 CRITICAL:   2 servers (Input validation: SQL injection, code injection)
 HIGH:       6 servers (CORS wildcards, path traversal, XSS)
-MEDIUM:   700 servers (Rate limiting gaps)
-SECURE:    20 servers (0 findings)
-Score: 98% | Scan: 2026-10-13
+MEDIUM:   2,000 servers (Rate limiting gaps)
+SECURE:       2 servers (0 findings)
+Score: 0.1% | Scan: 2026-10-13
 ```
 
 ## Critical Vulnerabilities (2 servers)
@@ -28,7 +28,7 @@ Path Traversal & XSS: ae.genosys, ae.propick
 
 ## Scan Overview
 
-Servers: 728 | CRITICAL: 2 | HIGH: 6 | MEDIUM: 700 | SECURE: 20 | Score: 98%
+Servers: 2,028 | CRITICAL: 2 | HIGH: 6 | MEDIUM: 700 | SECURE: 20 | Score: 0.1%
 
 [Scanner](https://github.com/LHMisme420/mcp-authscan) | [Raw Data](data/comprehensive_scan_v2.json)
 
