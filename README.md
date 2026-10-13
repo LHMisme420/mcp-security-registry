@@ -1,24 +1,36 @@
-# MCP Security Registry - 728 Servers Audited
+# MCP Security Registry
 
-**728 Servers Scanned | 99% Secure | 0 Critical Vulnerabilities**
+**First comprehensive public security audit of 728 MCP servers.**
 
-First comprehensive security audit of the MCP ecosystem.
+## V2 Comprehensive Scan Results
 
-## Results
+```
+CRITICAL:   2 servers (Input validation: SQL injection, code injection)
+HIGH:       6 servers (CORS wildcards, path traversal, XSS)
+MEDIUM:   700 servers (Rate limiting gaps)
+SECURE:    20 servers (0 findings)
+Score: 98% | Scan: 2026-10-13
+```
 
-- Servers: 728
-- CRITICAL: 0
-- HIGH: 4 (CORS)
-- Secure: 722
-- Score: 99%
+## Critical Vulnerabilities (2 servers)
+
+**ae.genosys/genosys** - SQL Injection + Code Injection
+**ae.propick/propick** - SQL Injection + Code Injection
+
+## High Severity (6 servers)
+
+CORS Wildcards: ac.snag, ae.projectory, africa.ugc, agency.goji
+Path Traversal & XSS: ae.genosys, ae.propick
 
 ## Methodology
 
-We score by EXPLOITABILITY, not just endpoint access.
-- CRITICAL = tools/call works without auth (real exploitation)
-- HIGH = CORS wildcard or tools/list without auth
-- MEDIUM = Information disclosure
+7 security test categories: TLS/HTTPS, Input validation, Information disclosure, Rate limiting, Tool output safety, Resource isolation, Known vulnerabilities
 
-Result: 0 CRITICAL because no servers allow unauthenticated tool execution.
+## Scan Overview
 
-[Full Reports](docs/COMPREHENSIVE_SCAN_RESULTS.md) | [Tool](https://github.com/LHMisme420/mcp-authscan)
+Servers: 728 | CRITICAL: 2 | HIGH: 6 | MEDIUM: 700 | SECURE: 20 | Score: 98%
+
+[Scanner](https://github.com/LHMisme420/mcp-authscan) | [Raw Data](data/comprehensive_scan_v2.json)
+
+Built with VATA: Receipts Over Promises
+lhmisme2011@gmail.com | GitHub: LHMisme420
