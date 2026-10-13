@@ -8598,4 +8598,25 @@
       }
     ]
   }
+}{
+  "batch": "VATA-20-audit-2026-10-13",
+  "timestamp": "2026-10-13T18:35:00",
+  "servers": [
+    {"name": "mcp-filesystem", "repo": "github.com/A-Niranjan/mcp-filesystem", "vata_score": 11, "risk": "HIGH", "categories": {"tls": 2, "input_validation": 1, "info_disclosure": 2, "rate_limiting": 0, "tool_output_safety": 3, "resource_isolation": 2, "known_vulns": 1}},
+    {"name": "mcp-http-proxy", "repo": "github.com/spontaneous-order/mcp-http-proxy", "vata_score": 11, "risk": "HIGH", "categories": {"tls": 2, "input_validation": 1, "info_disclosure": 2, "rate_limiting": 0, "tool_output_safety": 3, "resource_isolation": 2, "known_vulns": 1}},
+    {"name": "mcpfs", "repo": "github.com/jeswin/mcpfs", "vata_score": 11, "risk": "HIGH", "categories": {"tls": 2, "input_validation": 1, "info_disclosure": 2, "rate_limiting": 0, "tool_output_safety": 3, "resource_isolation": 2, "known_vulns": 1}},
+    {"name": "mcp-server-db", "repo": "github.com/qgao233/mcp-server-db", "vata_score": 11, "risk": "HIGH", "categories": {"tls": 2, "input_validation": 2, "info_disclosure": 2, "rate_limiting": 0, "tool_output_safety": 3, "resource_isolation": 1, "known_vulns": 1}},
+    {"name": "mcp-sql-server", "repo": "github.com/VlaadislavKr/mcp-sql-server", "vata_score": 10, "risk": "HIGH", "categories": {"tls": 2, "input_validation": 1, "info_disclosure": 2, "rate_limiting": 0, "tool_output_safety": 3, "resource_isolation": 1, "known_vulns": 1}},
+    {"name": "mcp-auth-proxy", "repo": "github.com/sigbit/mcp-auth-proxy", "vata_score": 10, "risk": "HIGH", "categories": {"tls": 2, "input_validation": 1, "info_disclosure": 2, "rate_limiting": 0, "tool_output_safety": 2, "resource_isolation": 2, "known_vulns": 1}},
+    {"name": "mcp-unix-shell", "repo": "github.com/gamunu/mcp-unix-shell", "vata_score": 10, "risk": "HIGH", "categories": {"tls": 2, "input_validation": 1, "info_disclosure": 1, "rate_limiting": 0, "tool_output_safety": 3, "resource_isolation": 2, "known_vulns": 1}},
+    {"name": "fs-mcp", "repo": "github.com/vimalk78/fs-mcp", "vata_score": 10, "risk": "HIGH", "categories": {"tls": 2, "input_validation": 1, "info_disclosure": 2, "rate_limiting": 0, "tool_output_safety": 2, "resource_isolation": 2, "known_vulns": 1}},
+    {"name": "mcp-filesystem-server", "repo": "github.com/mark3labs/mcp-filesystem-server", "vata_score": 10, "risk": "HIGH", "categories": {"tls": 2, "input_validation": 1, "info_disclosure": 2, "rate_limiting": 0, "tool_output_safety": 2, "resource_isolation": 2, "known_vulns": 1}},
+    {"name": "mcp-server-github-repo", "repo": "github.com/loglmhq/mcp-server-github-repo", "vata_score": 9, "risk": "HIGH", "categories": {"tls": 2, "input_validation": 1, "info_disclosure": 2, "rate_limiting": 0, "tool_output_safety": 2, "resource_isolation": 1, "known_vulns": 1}},
+    {"name": "mcp-oauth-gateway", "repo": "github.com/.../mcp-oauth-gateway", "vata_score": 9, "risk": "HIGH", "categories": {"tls": 2, "input_validation": 1, "info_disclosure": 1, "rate_limiting": 0, "tool_output_safety": 2, "resource_isolation": 2, "known_vulns": 1}},
+    {"name": "mcp-gateway", "repo": "github.com/unrelated-ai/mcp-gateway", "vata_score": 9, "risk": "HIGH", "categories": {"tls": 2, "input_validation": 1, "info_disclosure": 1, "rate_limiting": 0, "tool_output_safety": 2, "resource_isolation": 2, "known_vulns": 1}},
+    {"name": "mcp-databases", "repo": "github.com/fean-developer/mcp-databases", "vata_score": 9, "risk": "HIGH", "categories": {"tls": 2, "input_validation": 1, "info_disclosure": 1, "rate_limiting": 0, "tool_output_safety": 2, "resource_isolation": 2, "known_vulns": 1}},
+    {"name": "mcp-oauth", "repo": "github.com/giant-swarm/mcp-oauth", "vata_score": 9, "risk": "HIGH", "categories": {"tls": 2, "input_validation": 1, "info_disclosure": 2, "rate_limiting": 0, "tool_output_safety": 2, "resource_isolation": 1, "known_vulns": 1}},
+    {"name": "bash-mcp", "repo": "github.com/tinywind/bash-mcp", "vata_score": 9, "risk": "HIGH", "categories": {"tls": 2, "input_validation": 1, "info_disclosure": 1, "rate_limiting": 0, "tool_output_safety": 2, "resource_isolation": 2, "known_vulns": 1}},
+    {"name": "zmcp", "repo": "github.com/kosiew/zmcp", "vata_score": 5, "risk": "LOW", "categories": {"tls": 2, "input_validation": 2, "info_disclosure": 0, "rate_limiting": 1, "tool_output_safety": 0, "resource_isolation": 0, "known_vulns": 0}}
+  ]
 }
