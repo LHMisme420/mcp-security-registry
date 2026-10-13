@@ -1,34 +1,24 @@
-# 🔍 MCP Security Registry
+# MCP Security Registry - 728 Servers Audited
 
-**728 Servers Scanned | 99% Secure | 4 CORS Issues Found**
+**728 Servers Scanned | 99% Secure | 0 Critical Vulnerabilities**
 
-## Summary
+First comprehensive security audit of the MCP ecosystem.
 
-First comprehensive security audit of all public MCP servers.
+## Results
 
-**Results:**
-- Total Scanned: 728
+- Servers: 728
 - CRITICAL: 0
-- HIGH: 4 (CORS wildcards)
+- HIGH: 4 (CORS)
 - Secure: 722
 - Score: 99%
 
-## Vulnerable Servers (4)
+## Methodology
 
-1. ac.snag/snag - CORS wildcard
-2. ae.projectory/mcp - CORS wildcard
-3. africa.ugc/ugc - CORS wildcard
-4. agency.goji/goji - CORS wildcard
+We score by EXPLOITABILITY, not just endpoint access.
+- CRITICAL = tools/call works without auth (real exploitation)
+- HIGH = CORS wildcard or tools/list without auth
+- MEDIUM = Information disclosure
 
-## Reports
+Result: 0 CRITICAL because no servers allow unauthenticated tool execution.
 
-- [Full Findings](docs/COMPREHENSIVE_SCAN_RESULTS.md)
-- [Raw Data](data/final_scan_v2.json)
-- [Scanner Tool](https://github.com/LHMisme420/mcp-authscan)
-
-## About
-
-VATA - Vulnerability Assessment and Tracking Archive
-"Receipts Over Promises"
-
-Maintained by Leroy (RU∞X) | Oct 12, 2026
+[Full Reports](docs/COMPREHENSIVE_SCAN_RESULTS.md) | [Tool](https://github.com/LHMisme420/mcp-authscan)
