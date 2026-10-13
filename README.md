@@ -1,15 +1,34 @@
-# MCP Security Registry
+# 🔍 MCP Security Registry
 
-**17 servers scanned | 2 vulnerabilities found**
+**728 Servers Scanned | 99% Secure | 4 CORS Issues Found**
 
-## Critical: Citedy MCP Zero-Auth
+## Summary
 
-Endpoint: GET https://mcp.citedy.com/mcp/sse
-Returns: Server version 3.0.0, protocol version 2025-03-26
-Auth: NONE REQUIRED ❌
+First comprehensive security audit of all public MCP servers.
 
-Fix: Require authentication
+**Results:**
+- Total Scanned: 728
+- CRITICAL: 0
+- HIGH: 4 (CORS wildcards)
+- Secure: 722
+- Score: 99%
 
-16 other servers verified secure.
+## Vulnerable Servers (4)
 
-[Full Findings](docs/FINDINGS.md)
+1. ac.snag/snag - CORS wildcard
+2. ae.projectory/mcp - CORS wildcard
+3. africa.ugc/ugc - CORS wildcard
+4. agency.goji/goji - CORS wildcard
+
+## Reports
+
+- [Full Findings](docs/COMPREHENSIVE_SCAN_RESULTS.md)
+- [Raw Data](data/final_scan_v2.json)
+- [Scanner Tool](https://github.com/LHMisme420/mcp-authscan)
+
+## About
+
+VATA - Vulnerability Assessment and Tracking Archive
+"Receipts Over Promises"
+
+Maintained by Leroy (RU∞X) | Oct 12, 2026
