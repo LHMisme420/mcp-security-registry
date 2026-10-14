@@ -1,0 +1,35 @@
+{
+  "compliance_framework": "VATA MCP Security Standard",
+  "mappings": {
+    "rate_limiting_missing": {
+      "owasp": "A01:2021 – Broken Access Control",
+      "cwe": ["CWE-400: Uncontrolled Resource Consumption", "CWE-770: Allocation of Resources Without Limits"],
+      "nist": "SC-7: Boundary Protection",
+      "severity": "MEDIUM"
+    },
+    "path_traversal": {
+      "owasp": "A01:2021 – Broken Access Control",
+      "cwe": ["CWE-22: Improper Limitation of a Pathname to a Restricted Directory"],
+      "nist": "AC-3: Access Enforcement",
+      "severity": "HIGH"
+    },
+    "info_disclosure": {
+      "owasp": "A01:2021 – Broken Access Control",
+      "cwe": ["CWE-200: Exposure of Sensitive Information to an Unauthorized Actor"],
+      "nist": "SI-4: Information System Monitoring",
+      "severity": "MEDIUM"
+    },
+    "cors_misconfiguration": {
+      "owasp": "A07:2021 – Cross-Site Request Forgery (CSRF)",
+      "cwe": ["CWE-346: Origin Validation Error"],
+      "nist": "SC-7: Boundary Protection",
+      "severity": "HIGH"
+    },
+    "auth_bypass": {
+      "owasp": "A07:2021 – Identification and Authentication Failures",
+      "cwe": ["CWE-287: Improper Authentication"],
+      "nist": "IA-2: User Identification and Authentication",
+      "severity": "CRITICAL"
+    }
+  }
+}
