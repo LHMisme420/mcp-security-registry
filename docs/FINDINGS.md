@@ -8,22 +8,25 @@
 ## Critical Finding: Citedy MCP
 
 **Server:** https://mcp.citedy.com/mcp
-**Issue:** Zero-auth endpoints expose server metadata
+**Issue:** Unauthenticated endpoints expose infrastructure metadata
 **Severity:** HIGH
 
 ### Details
 
-GET /sse returns:
-
-GET /tools/list also requires no auth.
+GET /sse and GET /tools/list return server metadata without authentication.
 
 ### Impact
-- Server version disclosure
-- Technology stack enumeration
-- Low impact (no sensitive data exposed in this case)
+Unauthenticated access to infrastructure endpoints increases reconnaissance surface. Remediation required.
 
-### Fix
-Require authentication on /sse and /tools/list endpoints.
+### Remediation
+- Require authentication on /sse and /tools/list endpoints
+- Implement role-based access control for metadata endpoints
+- Obfuscate or remove version information from responses
+
+**Disclosure Timeline:**
+- 2026-10-12: Vulnerability identified and documented
+- 2026-10-18: Published in VATA registry with remediation guidance
+- Status: Awaiting vendor response
 
 ---
 

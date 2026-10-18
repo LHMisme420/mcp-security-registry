@@ -8,17 +8,21 @@
 
 ## Findings
 
-- **1 Critical** - Citedy MCP (zero-auth endpoints)
+- **1 Critical** - Citedy MCP (unauthenticated infrastructure endpoints)
 - **0 High** - Other servers clean
 - **16 Verified Secure**
 
 ## Citedy MCP Vulnerability
 
-**Endpoints exposed without authentication:**
-- GET /sse → Returns server metadata
-- GET /tools/list → Returns tool enumeration
+**Issue:** Unauthenticated endpoints expose infrastructure metadata
 
-**Status:** UNPATCHED (as of 2026-10-12)
+**Affected Endpoints:**
+- GET /sse
+- GET /tools/list
+
+**Status:** Disclosed with remediation guidance (2026-10-18)
+
+**Remediation:** Require authentication; implement access controls; remove/obfuscate sensitive metadata from responses
 
 ## Clean Servers
 
@@ -26,4 +30,4 @@ Tavily, Daloopa, BetterBugs, Lusha, AntiMetal, FlowStudio, Hunter.io, PointFive,
 
 ---
 
-**Last Updated:** 2026-10-12 | **Next Scan:** 2026-11-12
+**Last Updated:** 2026-10-18 | **Next Scan:** 2026-11-18
