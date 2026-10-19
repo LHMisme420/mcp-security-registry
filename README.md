@@ -9,7 +9,7 @@
 - `data/final_scan_v2.json` - Phase 1: 728 servers
 - `data/phase2_deepdive_audit.json` - Phase 2: 1,300 servers
 - `data/phase2_vata_scores.json` - VATA scores, all 2,028
-- `data/phase2_exploitation_pocs.json` - 308 vulnerability candidates flagged for review (149 command injection patterns, 80 credential disclosure patterns, 79 missing authentication checks)
+- `data/phase2_vulnerability_candidates.json` - 308 vulnerability candidates flagged for review (149 command injection patterns, 80 credential disclosure patterns, 79 missing authentication checks)
 
 ## Key Finding
 
