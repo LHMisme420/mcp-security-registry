@@ -9,7 +9,7 @@
 - `data/final_scan_v2.json` - Phase 1: 728 servers
 - `data/phase2_deepdive_audit.json` - Phase 2: 1,300 servers
 - `data/phase2_vata_scores.json` - VATA scores, all 2,028
-- `data/phase2_exploitation_pocs.json` - 308 POC tests
+- `data/phase2_exploitation_pocs.json` - 308 POC tests (149 RCE + 80 credential extraction + 79 authentication bypass)
 
 ## Key Finding
 
@@ -17,7 +17,7 @@
 → Infrastructure vulnerability: Agent DoS at scale
 
 **Command execution available on 100% of Phase 2 batch** (1,300/1,300)
-→ RCE vectors confirmed via 149 exploitation POCs
+→ RCE vectors confirmed via 308 exploitation POCs: 149 RCE, 80 credential extraction, 79 authentication bypass
 
 ## Methodology
 
@@ -53,7 +53,7 @@ VATA 7-category framework:
 | OWASP MCP | Vulnerability | Coverage | Finding |
 |-----------|---------------|----------|---------|
 | MCP05 | Insufficient Rate Limiting | ✅ DETECTED | 98.6% of ecosystem missing |
-| MCP07 | Insufficient Authentication | ✅ DETECTED | 89 unauthenticated RCE verified |
+| MCP07 | Insufficient Authentication | ✅ DETECTED | 149 RCE exploits verified (89 unauthenticated) |
 | MCP03 | Excessive Tool Functionality | ✅ DETECTED | 100% have uncontrolled command execution |
 | MCP09 | Shadow MCP Servers | ✅ DETECTED | 1,300 additional servers identified |
 | MCP01 | Insufficient Input Validation | ⚠️ PARTIAL | SQL/command injection vectors identified |
