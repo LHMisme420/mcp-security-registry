@@ -5,18 +5,6 @@
 **Servers Scanned:** 17
 **Vulnerabilities Found:** 2
 
-## Critical Finding: Citedy MCP
-
-**Server:** https://mcp.citedy.com/mcp
-**Issue:** Unauthenticated endpoints expose infrastructure metadata
-**Severity:** HIGH
-
-### Details
-
-GET /sse and GET /tools/list return server metadata without authentication.
-
-### Impact
-Unauthenticated access to infrastructure endpoints increases reconnaissance surface. Remediation required.
 
 ### Remediation
 - Require authentication on /sse and /tools/list endpoints
